@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+    <title>Game</title>
+  </head>
+  <body>
+    <header>Security Interactive</header>
+    <main>
+      <h1>Jeu du hacker</h1>
+      <div class="container">
+        <label for="password"
+          >Créez un mot de passe ultra-sécurisé et tentez d'atteindre le score
+          maximal :</label
+        >
+        <input type="password" id="password" name="password" />
+        <button id="testPasswordBtn">Évaluer le mot de passe</button>
+        <div id="results">
+          <p id="score"></p>
+          <p id="adjective"></p>
+          <p id="timeToHack"></p>
+        </div>
+      </div>
+    </main>
+    <footer>Mentions légales</footer>
+    <script src="game.js"></script>
+  </body>
+</html>

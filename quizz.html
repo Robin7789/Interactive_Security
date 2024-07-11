@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="quizz.css" />
+    <title>Quizz</title>
+  </head>
+  <body>
+    <header>Security Interactive</header>
+    <main>
+      <h1>Quizz sur la Sécurité Informatique</h1>
+      <div id="score-section">
+        <p>Score total: <span id="score">0</span>/200</p>
+        <p>Manches: <span id="manche">1</span>/20</p>
+      </div>
+      <div id="quiz-section">
+        <form id="formulaire">
+          <p>
+            <div id="question">
+              <label id="element">Ceci est la question du quizz</label>
+            </div>
+            <br /><br />
+            <div id="options" class="flex">
+              <!-- Les options seront générées ici -->
+            </div>
+          </p>
+          <button type="submit" id="confirm-btn">Confirmer</button>
+        </form>
+      </div>
+      <div id="result-section" style="display:none;">
+        <h2>Score final: <span id="final-score"></span>/200</h2>
+        <button id="restart-btn">Recommencer</button>
+      </div>
+    </main>
+    <footer>Mentions legales</footer>
+    <script src="quizz.js"></script>
+  </body>
+</html>
