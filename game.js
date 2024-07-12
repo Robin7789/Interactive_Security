@@ -17,7 +17,7 @@ document
 
 function calculatePasswordScore(password) {
   let score = 0;
-  if (password.length >= 8) score += 20;
+  if (password.length >= 20) score += 20;
   if (/[A-Z]/.test(password)) score += 20;
   if (/[a-z]/.test(password)) score += 20;
   if (/[0-9]/.test(password)) score += 20;
@@ -34,22 +34,13 @@ function getAdjective(score) {
 }
 
 function calculateTimeToHack(password) {
-  const complexity = calculateComplexity(password);
-  const seconds = Math.pow(2, complexity) / 1000;
+  const length = password.length;
+  const seconds = Math.pow(2, length) / 1000;
+
   if (seconds < 60) return "Quelques secondes";
   if (seconds < 3600) return "Quelques minutes";
   if (seconds < 86400) return "Quelques heures";
   if (seconds < 2592000) return "Quelques jours";
   if (seconds < 31536000) return "Quelques mois";
   return "Plusieurs années";
-}
-
-function calculateComplexity(password) {
-  const length = password.length;
-  let characterSets = 0;
-  if (/[a-z]/.test(password)) characterSets += 26;
-  if (/[A-Z]/.test(password)) characterSets += 26;
-  if (/[0-9]/.test(password)) characterSets += 10;
-  if (/[^A-Za-z0-9]/.test(password)) characterSets += 32;
-  return Math.log2(Math.pow(characterSets, length));
 }

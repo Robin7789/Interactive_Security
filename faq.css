@@ -1,4 +1,5 @@
 body {
+  font-family: Arial, sans-serif;
   text-align: center;
   background-color: rgb(243, 230, 230);
   margin: 0;
@@ -11,14 +12,10 @@ header {
   padding: 20px 0;
 }
 
-footer {
-  background-color: #57a189;
-  font-size: 1em;
-  color: #fff;
-  margin-top: 20px;
-  padding: 10px 0;
-  width: 100%;
-  bottom: 0;
+a {
+  text-decoration: none;
+  color: #57a189;
+  font-weight: bold;
 }
 
 .faq {
@@ -38,7 +35,7 @@ footer {
 }
 
 .faq-question {
-  background-color: #57a189;
+  background-color: #127a59;
   color: #fff;
   padding: 15px;
   margin: 0;
@@ -72,4 +69,15 @@ footer {
 #faq-search:focus {
   outline: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #57a189;
+  font-size: 1em;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 0;
+  position: ;
+  width: 100%;
+  bottom: 0;
 }

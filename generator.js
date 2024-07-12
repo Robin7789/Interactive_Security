@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let el_down = document.getElementById("geeks");
+  let mdp = document.getElementById("geeks");
 
   function generateP() {
     let length = document.getElementById("length").value;
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function gfg_Run() {
-    el_down.innerHTML = generateP();
+    mdp.innerHTML = generateP();
   }
 
   document.getElementById("generate").addEventListener("click", function () {

@@ -15,30 +15,19 @@ header {
   box-shadow: 0 4px 2px -2px gray;
 }
 
-footer {
-  background-color: #57a189;
-  font-size: 1em;
-  color: #fff;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  box-shadow: 0 -4px 2px -2px gray;
-}
-
 main {
   padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #57a189;
+  font-weight: bold;
 }
 
 h1 {
   font-size: 2.5em;
   color: #444;
-}
-
-h3 {
-  font-size: 1.5em;
-  color: #666;
-  margin-bottom: 20px;
 }
 
 button {
@@ -68,23 +57,13 @@ button:hover {
   min-width: 200px;
 }
 
-@media (max-width: 600px) {
-  header,
-  footer {
-    font-size: 1.5em;
-    padding: 15px 0;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h3 {
-    font-size: 1.2em;
-  }
-
-  button {
-    padding: 10px 20px;
-    font-size: 1em;
-  }
+footer {
+  background-color: #57a189;
+  font-size: 1em;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -4px 2px -2px gray;
 }

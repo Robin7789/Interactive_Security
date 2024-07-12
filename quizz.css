@@ -18,6 +18,12 @@ main {
   padding: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: #57a189;
+  font-weight: bold;
+}
+
 h1 {
   font-size: 2em;
   color: #2c3e50;
