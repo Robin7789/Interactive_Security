@@ -4,7 +4,7 @@ document
     const password = document.getElementById("password").value;
     const score = calculatePasswordScore(password);
     const adjective = getAdjective(score);
-    const timeToHack = calculateTimeToHack(password);
+    const timeToHack = calculateTimeToHack(password, score);
 
     document.getElementById("score").textContent = `Score: ${score}/100`;
     document.getElementById(
@@ -33,9 +33,13 @@ function getAdjective(score) {
   return "Très fort";
 }
 
-function calculateTimeToHack(password) {
+function calculateTimeToHack(password, score) {
   const length = password.length;
-  const seconds = Math.pow(2, length) / 1000;
+
+  let baseSeconds = Math.pow(2, length);
+  baseSeconds *= score / 100;
+
+  const seconds = baseSeconds / 1000;
 
   if (seconds < 60) return "Quelques secondes";
   if (seconds < 3600) return "Quelques minutes";
